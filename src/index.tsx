@@ -10,7 +10,7 @@ import AuthGuard from './guards/auth.guard';
 import './style.css';
 import ContextAPIDemo from './pages/context.api.demo';
 import { CartProvider } from './contexts/cart.context';
-import { Provider, ReactReduxContext } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './store';
 import CounterDemoPage from './pages/counter.demo.page';
 

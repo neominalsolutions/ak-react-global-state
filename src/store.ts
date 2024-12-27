@@ -6,7 +6,7 @@ import { CounterReducer } from './slices/counter.slice';
 
 const store = configureStore({
 	reducer: {
-		counterState: CounterReducer,
+		counterState: CounterReducer, // state erişimi yaptığımız state bilgilerini güncellediğimiz functionlara biz reducer.
 	},
 });
 
