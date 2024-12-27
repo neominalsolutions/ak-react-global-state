@@ -5,6 +5,7 @@ import {
 	addItemAction,
 	removeItemAction,
 } from '../slices/favorite.products.slice';
+import { fetchProductsAction } from '../slices/products.slice';
 
 // senkron data
 const FavoriteProductsList = () => {
@@ -58,6 +59,11 @@ const ProductList = () => {
 						</div>
 					);
 				})}
+				<div>
+					<button onClick={() => dispatch(fetchProductsAction())}>
+						refresh
+					</button>
+				</div>
 			</div>
 		);
 

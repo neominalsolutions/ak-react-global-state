@@ -17,7 +17,12 @@ function Layout() {
 
 	useEffect(() => {
 		// server state ait function çağır client state load et
+
 		dispatch(fetchProductsAction());
+
+		// setInterval(() => {
+		// 	dispatch(fetchProductsAction());
+		// }, 3000);
 
 		console.log('productState', productState.data);
 	}, []);
