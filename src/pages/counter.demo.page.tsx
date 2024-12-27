@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store';
-import { increment } from '../slices/counter.slice';
+import { incrementAction } from '../slices/counter.slice';
 
 function CounterDemoPage() {
 	// state erişim yapmamızı sağlar hook
@@ -15,7 +15,7 @@ function CounterDemoPage() {
 			<button
 				onClick={() => {
 					// dispatch ile birlikte güncellenecek action çağırısı yaptık
-					dispatch(increment(5));
+					dispatch(incrementAction(5));
 				}}
 			>
 				(+)
