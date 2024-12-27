@@ -11,8 +11,9 @@ import './style.css';
 import ContextAPIDemo from './pages/context.api.demo';
 import { CartProvider } from './contexts/cart.context';
 import { Provider } from 'react-redux';
-import store from './store';
 import CounterDemoPage from './pages/counter.demo.page';
+import { store } from './store';
+import ProductPage from './pages/product.page';
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: 'redux',
 				Component: CounterDemoPage,
+			},
+			{
+				path: 'redux-thunk',
+				Component: ProductPage,
 			},
 		],
 	},

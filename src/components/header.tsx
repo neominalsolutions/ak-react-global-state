@@ -37,6 +37,12 @@ function Header({ children }: HeaderProps) {
 			>
 				Redux
 			</NavLink>{' '}
+			<NavLink
+				className={({ isActive }) => (isActive ? 'active-link' : '')}
+				to="/redux-thunk"
+			>
+				Redux Thunk
+			</NavLink>{' '}
 			{children && <p>{children}</p>}
 		</div>
 	);

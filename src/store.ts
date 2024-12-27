@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { CounterReducer } from './slices/counter.slice';
+import { favoriProductsReducer } from './slices/favorite.products.slice';
+import { ProductReducer } from './slices/products.slice';
 
 // counterState state erişim ismi
 // CounterReducer state güncelleyecek olan function
 
-const store = configureStore({
+export const store = configureStore({
 	reducer: {
 		counterState: CounterReducer, // state erişimi yaptığımız state bilgilerini güncellediğimiz functionlara biz reducer.
+		favoriteProductsState: favoriProductsReducer,
+		productState: ProductReducer,
 	},
 });
 
@@ -17,5 +21,3 @@ store.subscribe(() => {
 });
 
 export type RootState = ReturnType<typeof store.getState>;
-
-export default store;
