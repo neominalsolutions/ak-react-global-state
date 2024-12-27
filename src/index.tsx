@@ -1,6 +1,6 @@
 // React uygulamayı boostrapt edeceğimiz kod burada olacak.
 
-import React from 'react';
+import React, { lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Layout from './layouts/layout';
@@ -14,7 +14,11 @@ import { Provider } from 'react-redux';
 import CounterDemoPage from './pages/counter.demo.page';
 import { store } from './store';
 import ProductPage from './pages/product.page';
-import SwrDemoPage from './pages/swr.demo';
+// import SwrDemoPage from './pages/swr.demo';
+
+// lazy yükleme yapaıyoruz.
+// code splitting yapısı.
+const SwrDemoPage = lazy(() => import('./pages/swr.demo'));
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
