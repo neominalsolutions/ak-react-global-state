@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import CounterDemoPage from './pages/counter.demo.page';
 import { store } from './store';
 import ProductPage from './pages/product.page';
+import SwrDemoPage from './pages/swr.demo';
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
 			{
 				path: 'redux-thunk',
 				Component: ProductPage,
+			},
+			{
+				path: 'swr',
+				Component: SwrDemoPage,
 			},
 		],
 	},

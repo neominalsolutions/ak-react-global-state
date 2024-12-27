@@ -20,6 +20,7 @@
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.1",
+    "swr": "^2.3.0",
     "webpack-app": "file:"
   },
   "devDependencies": {
